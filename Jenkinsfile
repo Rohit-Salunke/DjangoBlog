@@ -4,8 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                cd /Users/ben/PycharmProjects/DjangoBlog
-                pylint test_project/polls
+                pylint --rcfile pylint.cfg test_project/polls
                 '''
             }
         }
