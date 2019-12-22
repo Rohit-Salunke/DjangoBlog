@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh '''
                 cd /Users/ben/PycharmProjects/DjangoBlog
-                pylint test_project/polls > pylint.log || exit 0
+                pylint test_project/polls
                 '''
             }
         }
