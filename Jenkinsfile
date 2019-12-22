@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'pylint test_project/polls > pylint.log || exit 0'
+                sh '''
+                cd $WORKSPACE
+                pylint test_project/polls > pylint.log || exit 0
+                '''
             }
         }
     }
