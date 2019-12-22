@@ -1,3 +1,4 @@
+"""custom model"""
 import datetime
 
 from django.db import models
